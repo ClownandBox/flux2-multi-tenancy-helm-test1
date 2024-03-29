@@ -1,0 +1,12 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: helm-test1-1
+  namespace: helm-test1
+spec:
+  interval: 1m
+  ref:
+    branch: main
+  url: https://github.com/ClownandBox/helm-test1
+  secretRef:
+    name: helm-test1
